@@ -1,51 +1,7 @@
-# API Documentation for 19.ApiBuilding
+# API Documentation for Contact Api
 
 ## Overview
 This project is a simple Express.js API with user authentication and contact management. It uses MongoDB for data storage via Mongoose and JWT for protected routes.
-
-## Setup
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Create a `.env` file at the project root with:
-   ```env
-   MONGO_URI=<your MongoDB connection string>
-   PORT=<port number>
-   JWT=<your_jwt_secret>
-   ```
-3. Start the server:
-   ```bash
-   npm start
-   ```
-4. Server home route:
-   - `GET /`
-   - Returns a JSON message to verify the API is running.
-
-## Middleware
-
-- `express.json()` is used to parse JSON request bodies.
-- `dotenv` loads environment variables from `.env`.
-- `isAuthenticated` middleware requires a JWT token in the `Auth` request header for protected contact routes.
-
-## Models
-
-### User
-Fields:
-- `name` (String, required)
-- `email` (String, required)
-- `password` (String, required)
-- `createdAt` (Date, default current date)
-
-### Contact
-Fields:
-- `name` (String, required)
-- `email` (String, required)
-- `phone` (String, required)
-- `type` (String, required)
-- `createdAt` (Date, default current date)
-- `user` (ObjectId) - references the user who created the contact
 
 ## Routes
 

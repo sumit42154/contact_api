@@ -190,11 +190,9 @@ All contact routes are mounted at `/api/contact`.
 
 ## Notes and Recommendations
 
-- The login route should ideally use `POST` instead of `GET`.
 - Protected contact routes expect `Auth` header with the JWT token returned by login.
 - The password is hashed during registration and compared securely during login.
 - The contact model stores the associated user `_id` so you can query contacts by user.
-- Use the `MONGO_URI`, `PORT`, and `JWT` values correctly in `.env`.
 
 ## Example Workflow
 1. Register a user with `POST /api/user/register`.
